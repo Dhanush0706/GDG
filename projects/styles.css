@@ -1,0 +1,332 @@
+body {
+    font-family: 'Google Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    transition: all 0.3s ease;
+}
+
+nav .logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #007bff;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #007bff;
+}
+
+nav ul li a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #007bff;
+    transition: width 0.3s;
+}
+
+nav ul li a:hover::after {
+    width: 100%;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+main {
+    padding: 8rem 1rem 2rem;
+    background-color: #ffffff;
+}
+
+#intro {
+    padding-top: 5rem;
+    position: relative;
+    height: 100px; /* Adjust height as needed */
+    overflow: hidden;
+  }
+  
+  .map-container {
+    position: relative;
+    width: 100%;
+  }
+  
+  .map-road {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%; /* Start with zero width */
+    height: 2px;
+    background-color: #333;
+    transform: translateY(-50%);
+  }
+
+  .map-marker {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .map-marker img {
+    max-width: 50px;
+    max-height: 50px;
+    object-fit: contain; 
+    transition: transform 0.3s ease;
+  }
+  .map-marker:hover img {
+    transform: scale(1.4); 
+  }
+
+  .label {
+    position: absolute; /* Position labels absolutely */
+      top: 110%; /* Adjust top position as needed */
+      left: 50%; 
+      transform: translate(-50%, 0); /* Center labels horizontally */
+      text-align: center;
+      font-size: 20px;
+  }
+  
+  .map-marker[data-stage="1"] {
+    left: 6%;
+    background-color: #edf04e; 
+  }
+  
+  .map-marker[data-stage="2"] {
+    left: 22%; 
+    background-color: #d9534f;
+  }
+  
+  .map-marker[data-stage="3"] {
+    left: 37%; 
+    background-color: white;
+  }
+  
+  .map-marker[data-stage="4"] {
+    left: 52%; 
+    background-color: #5bc0de;
+  }
+  
+  .map-marker[data-stage="5"] {
+    left: 68%; 
+    background-color: white;
+  }
+  
+  .map-marker[data-stage="6"] {
+    left: 85%; 
+    background-color: #5cb85c;
+  } 
+ 
+#projects {
+    margin-top: 200px;
+    margin-left: 100px;
+    max-width: 1200px;
+    
+    padding: 1rem 1rem;
+}
+
+#projects h1 {
+    margin-bottom: 3rem;
+    margin-left: 380px;
+    color: #333;
+    font-size: 5rem;
+    animation: fadeInDown 2s ease-out;
+    text-decoration: underline;
+}
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-300px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    padding: 0 2rem;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure content is spaced properly */
+    height: 350px;
+    background-color: #ffffff;
+    border-style: groove;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.project-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.project-image {
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    transition: transform 0.5s ease; /* Added for smooth zoom effect */
+}
+
+.project-card:hover .project-image {
+    transform: scale(1.1); /* Ensures the zoom-in effect is visible */
+}
+
+.project-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Ensure button stays at the bottom */
+    padding: 0.1rem;
+    height: 100%;
+    position:absolute;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(12px);
+}
+
+.project-info h2 {
+    margin: 0 0 1rem;
+    padding-top: 2rem;
+    color: black;
+    text-align: center  ;
+    font-family:Helvetica, sans-serif;
+}
+
+.project-info p {
+    justify-self: start;
+    padding: 1.5rem;
+    padding-top: 2rem;
+    color: black;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.project-info a {
+    text-decoration: none;
+    background-color: #007bff; /* Blue button */
+    border-radius: 4px;
+    margin-top: auto;
+    color: white;
+    display: inline-block;
+    padding:0.5rem 1rem;
+    text-align: center;
+    font-family: Poppins;
+    width: fit-content;
+    align-self:center;
+    margin-bottom: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.project-info a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background-color: #ffffff;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .burger {
+        display: block;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff;
+        border-top: 1px solid #ddd;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    nav ul li {
+        text-align: center;
+        margin: 1rem 0;
+    }
+
+    nav ul li a {
+        padding: 1rem;
+    }
+}

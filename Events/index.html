@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Google+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script src="script.js"></script>
+    <!-- Placeholder for Navbar -->
+    <header>
+        <div id="navbar-placeholder">
+            <nav>
+                <div class="logo">GDG NIT Mizoram</div>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="burger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Welcome to Our Events</h2>
+            <p>Discover how our events can change your perspective and impact your life.</p>
+        </div>
+    </section>
+
+    <!-- Year Filter Section -->
+    <section class="year-filter">
+        <label for="year-filter">Filter by Year:</label>
+        <select id="year-filter">
+            <option value="2025">2025</option>
+            <option value="2024">2024</option>
+            <option value="2023">2023</option>
+            <option value="all">All Years</option>
+        </select>
+    </section>
+
+    <!-- Illustration Animation Section -->
+    <section class="illustration">
+        <div class="illustration-part">
+            <img src="impact-1.jpg" alt="Impact Image 1">
+            <div class="illustration-text">The Spark of Event</div>
+        </div>
+        <div class="illustration-part">
+            <img src="impact-2.png" alt="Impact Image 2">
+            <div class="illustration-text">Event Planning in Full Swing</div>
+        </div>
+        <div class="illustration-part">
+            <img src="illustration.png" alt="Impact Image 3">
+            <div class="illustration-text">Transformational Impact</div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section class="events-section">
+        <h2>Our Events</h2>
+        <div class="event-card" data-year="2025">
+            <div class="event-image" style="background-image: url('event-1.png');"></div>
+            <div class="event-info">
+                <h3>Event Title 1</h3>
+                <p>Date: January 1, 2025</p>
+                <p>Description: This is a brief description of Event 1.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        <div class="event-card" data-year="2025">
+            <div class="event-image" style="background-image: url('event-2.png');"></div>
+            <div class="event-info">
+                <h3>Event Title 2</h3>
+                <p>Date: February 14, 2025</p>
+                <p>Description: This is a brief description of Event 2.</p>
+                <a href="#" class="btn">Learn More</a>
+            </div>
+        </div>
+        <!-- Add more event cards as needed -->
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p>&copy; 2025 NIT MIZORAM. All rights reserved.</p>
+    </footer>
+    
+</body>
+</html>
