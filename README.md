@@ -67,3 +67,27 @@ Both pages are intended to integrate into a larger GDG site but can function ind
 
 ## Folder Structure
 
+GDG/
+├── Events/ # Front-end for GDG Events page
+│ ├── index.html # Main Events page markup
+│ ├── css/
+│ │ └── styles.css # Styles specific to the Events page
+│ ├── assets/
+│ │ ├── images/ # Event cover images, icons, etc.
+│ │ └── fonts/ # Any custom fonts (if used)
+│ └── js/
+│ └── main.js # (Optional) JS for interactivity on Events page
+│
+├── projects/ # Front-end for GDG Projects page
+│ ├── index.html # Main Projects page markup
+│ ├── css/
+│ │ └── styles.css # Styles specific to the Projects page
+│ ├── assets/
+│ │ ├── images/ # Project thumbnails, logos
+│ │ └── fonts/ # Custom font files (if used)
+│ └── js/
+│ └── main.js # (Optional) JS for projects filtering or lightbox
+│
+├── README.md # This file
+└── .gitignore # (Optional) To ignore OS or editor artifacts
+
