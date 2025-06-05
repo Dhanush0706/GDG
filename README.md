@@ -58,8 +58,7 @@ Both pages are intended to integrate into a larger GDG site but can function ind
 
 - **HTML5**  
 - **CSS3 (Flexbox / Grid / Media Queries)**  
-- **Vanilla JavaScript (optional)**  
-- **Google Fonts & Font Awesome (if included)**  
+- **Google Fonts & Font Awesome**  
 
 > _No build tools, frameworks, or preprocessors are required. Everything is plain, static front-end code._
 
